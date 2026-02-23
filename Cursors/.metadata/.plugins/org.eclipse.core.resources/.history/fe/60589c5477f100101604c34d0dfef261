@@ -1,0 +1,31 @@
+package Enumeration;
+
+import java.util.*;
+public class Employee_App {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		Vector <Employee> v = new Vector();
+		System.out.print("Enter the Size: ");
+		int size = sc.nextInt();
+		for(int i = 0; i < size; i++) {
+			System.out.print("Enter the Name: ");
+			String name = sc.next();
+			sc.nextLine();
+			System.out.print("Enter the Salary: ");
+			double salary = sc.nextDouble();
+			
+			Employee emp = new Employee(name, salary);
+			v.add(emp);
+		}
+		
+		System.out.println("Employee Details: ");
+		System.out.println("ID"+"	"+"NAME"+"		"+"SALARY");
+		Enumeration <Employee> e = v.elements();
+		while(e.hasMoreElements()) {
+			Employee emp = e.nextElement();
+			System.out.println("	"+emp.getId() + "	" + emp.getName() + "	" + emp.getSalary());
+		}
+	}	
+}

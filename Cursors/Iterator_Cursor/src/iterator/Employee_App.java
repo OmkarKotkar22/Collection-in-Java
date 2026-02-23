@@ -1,0 +1,42 @@
+package iterator;
+import java.util.*;
+public class Employee_App {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		Vector<Employee> v = new Vector<>();
+		System.out.print("Enter the Size: ");
+		int size = sc.nextInt();
+		for(int i = 0; i < size; i++) {
+			
+			
+			System.out.print("Enter the name: ");
+			String name = sc.next();
+			sc.nextLine();
+			
+			System.out.print("Enter the salary: ");
+			double salary = sc.nextDouble();
+			System.out.println();
+			Employee emp = new Employee(name, salary);
+			v.add(emp);
+			
+		}
+		Iterator<Employee> li = v.iterator();
+		System.out.println("\n--- remove() method demonstration ---");
+
+       		while(li.hasNext()) {
+        		Employee e = li.next();
+        		if(e.getSalary() > 8000) {
+        			li.remove();
+        		}
+        	}
+        
+		System.out.println("ID"+"    "+ "NAME"+"    "+"SALARY");
+		for(Employee e : v) {
+			
+		System.out.println(e.getId() + " 	" + e.getName() + " 	" + e.getSalary());
+		}
+	}
+
+}

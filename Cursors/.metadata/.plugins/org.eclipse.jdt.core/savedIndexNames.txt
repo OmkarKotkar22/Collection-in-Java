@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+D:\GIRI's TECH HUB\GTH_Java\Java_Practice_Programs\Assignments\Collection\Cursors\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+4046275659.index
+47379747.index
+3002897748.index
