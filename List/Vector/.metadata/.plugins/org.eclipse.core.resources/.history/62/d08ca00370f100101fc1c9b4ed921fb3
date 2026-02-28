@@ -1,0 +1,41 @@
+package Vector;
+import java.util.*;
+
+public class Vector_App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		Employee emp[] = new Employee[5];
+		for(int i = 0; i < emp.length; i++) {
+			emp[i] = new Employee();
+			
+			System.out.print("Enter the id: ");
+			int id = sc.nextInt();
+			
+			System.out.print("Enter the name: ");
+			String name = sc.next();
+			sc.nextLine();
+			
+			System.out.print("Enter the salary: ");
+			double salary = sc.nextDouble();
+			
+			emp[i].setId(id);
+			emp[i].setName(name);
+			emp[i].setSalary(salary);
+		}
+		
+		Vector v = new Vector();
+		
+		
+		v.add(emp);
+		
+		Iterator i = v.iterator();
+		while(i.hasNext()) {
+			Object obj = i.next();
+			Employee e = (Employee)obj;
+			System.out.print(e.getId() + " " + e.getName() + " " + e.getSalary());
+		}
+	}
+
+}
