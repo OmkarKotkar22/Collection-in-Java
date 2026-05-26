@@ -37,14 +37,14 @@ public class First_Repeating_Word_inHashMap{
 		}
 
 		if(!found) {
-            if(map.containsKey(word)) {
-                System.out.println("First Repeating Word: " + word);
-                found = true;
-            }
-        }
+            		if(map.containsKey(word)) {
+                		System.out.println("First Repeating Word: " + word);
+                		found = true;
+            		}
+        	}
 
-        if(!found) {
-            System.out.println("No repeating word found");
-        }
+        	if(!found) {
+            		System.out.println("No repeating word found");
+        	}
 	}
 }
